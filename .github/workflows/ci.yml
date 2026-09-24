@@ -15,28 +15,38 @@ jobs:
         run: |
           test -f index.html
           test -f css/styles.css
+          test -f css/widgets.css
           test -f js/engine.js
+          test -f js/engine-advanced.js
           test -f js/ui.js
           test -f js/app.js
           test -f README.md
           echo "All required files present"
 
-      - name: Validate HTML has root app shell
+      - name: Validate HTML shell
         run: |
           grep -q 'id="app"' index.html
           grep -q 'id="board"' index.html
           grep -q 'SC Whiteboard' index.html
+          grep -q 'engine-advanced.js' index.html
+          grep -q 'widgets.css' index.html
+          grep -q 'btn-curtain' index.html
+          grep -q 'btn-timer' index.html
           echo "HTML structure OK"
 
       - name: Syntax-check JavaScript
         run: |
           node --check js/engine.js
+          node --check js/engine-advanced.js
           node --check js/ui.js
           node --check js/app.js
           echo "JS syntax OK"
 
-      - name: Basic CSS sanity
+      - name: Feature markers
         run: |
-          grep -q '\.glass' css/styles.css
-          grep -q '\.toolbar' css/styles.css
-          echo "CSS sanity OK"
+          grep -q 'deletePage' js/engine-advanced.js
+          grep -q 'insertTextAt' js/engine-advanced.js
+          grep -q 'btn-curtain' js/ui.js
+          grep -q 'PERIODIC' js/ui.js
+          grep -q '\.curtain' css/widgets.css
+          echo "Feature markers OK"
