@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/widgets.css" />
 </head>
 <body>
   <div id="app" class="app" data-theme="dark">
@@ -58,39 +59,21 @@
       </div>
 
       <div class="tool-group">
-        <button type="button" class="tool" data-tool="line" title="Line">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5"/></svg>
-        </button>
-        <button type="button" class="tool" data-tool="rect" title="Rectangle">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="14" rx="1"/></svg>
-        </button>
-        <button type="button" class="tool" data-tool="ellipse" title="Ellipse">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="8" ry="6"/></svg>
-        </button>
-        <button type="button" class="tool" data-tool="triangle" title="Triangle">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5L4 19h16L12 5z"/></svg>
-        </button>
-        <button type="button" class="tool" data-tool="arrow" title="Arrow">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-        </button>
+        <button type="button" class="tool" data-tool="line" title="Line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19L19 5"/></svg></button>
+        <button type="button" class="tool" data-tool="rect" title="Rectangle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="14" rx="1"/></svg></button>
+        <button type="button" class="tool" data-tool="ellipse" title="Ellipse"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="8" ry="6"/></svg></button>
+        <button type="button" class="tool" data-tool="triangle" title="Triangle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5L4 19h16L12 5z"/></svg></button>
+        <button type="button" class="tool" data-tool="arrow" title="Arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
       </div>
 
       <div class="tool-group">
-        <button type="button" class="tool" data-tool="text" title="Text">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V5h16v2"/><path d="M12 5v14"/><path d="M8 19h8"/></svg>
-        </button>
-        <button type="button" class="tool" data-tool="sticky" title="Sticky">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
-        </button>
-        <button type="button" class="tool" id="btn-image" title="Image">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-4 4-2-2-5 5"/></svg>
-        </button>
+        <button type="button" class="tool" data-tool="text" title="Text"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V5h16v2"/><path d="M12 5v14"/><path d="M8 19h8"/></svg></button>
+        <button type="button" class="tool" data-tool="sticky" title="Sticky"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></button>
+        <button type="button" class="tool" id="btn-image" title="Image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-4 4-2-2-5 5"/></svg></button>
       </div>
 
       <div class="tool-group props">
-        <label class="swatch-label">Color
-          <input type="color" id="color-picker" value="#3b82f6" />
-        </label>
+        <label class="swatch-label">Color<input type="color" id="color-picker" value="#3b82f6" /></label>
         <div class="presets" id="color-presets">
           <button type="button" data-c="#0f172a" style="background:#0f172a"></button>
           <button type="button" data-c="#ef4444" style="background:#ef4444"></button>
@@ -100,15 +83,9 @@
           <button type="button" data-c="#a855f7" style="background:#a855f7"></button>
           <button type="button" data-c="#ffffff" style="background:#fff;border:1px solid #64748b"></button>
         </div>
-        <label class="range-label">Size
-          <input type="range" id="size-slider" min="1" max="48" value="4" />
-        </label>
-        <label class="range-label">Opacity
-          <input type="range" id="opacity-slider" min="10" max="100" value="100" />
-        </label>
-        <label class="check-label">
-          <input type="checkbox" id="fill-toggle" /> Fill shapes
-        </label>
+        <label class="range-label">Size<input type="range" id="size-slider" min="1" max="48" value="4" /></label>
+        <label class="range-label">Opacity<input type="range" id="opacity-slider" min="10" max="100" value="100" /></label>
+        <label class="check-label"><input type="checkbox" id="fill-toggle" /> Fill shapes</label>
       </div>
     </aside>
 
@@ -116,9 +93,7 @@
       <canvas id="board" aria-label="Whiteboard canvas"></canvas>
       <div id="laser-dot" class="laser-dot" hidden></div>
       <div id="spotlight" class="spotlight" hidden></div>
-      <div id="curtain" class="curtain" hidden>
-        <div class="curtain-bar" id="curtain-bar"></div>
-      </div>
+      <div id="curtain" class="curtain" hidden><div class="curtain-bar" id="curtain-bar"></div></div>
       <div id="magnifier" class="magnifier" hidden></div>
       <div id="timer-widget" class="timer-widget glass" hidden>
         <div class="timer-display" id="timer-display">05:00</div>
@@ -144,7 +119,6 @@
           <button type="button" class="btn small ghost" id="btn-del-page">Del</button>
         </div>
       </section>
-
       <section class="panel-section">
         <h3>Background</h3>
         <div class="bg-grid" id="bg-grid">
@@ -156,7 +130,6 @@
           <button type="button" class="bg-swatch" data-bg="gradient" title="Gradient"></button>
         </div>
       </section>
-
       <section class="panel-section">
         <h3>Teaching</h3>
         <button type="button" class="btn small block" id="btn-spotlight">Spotlight</button>
@@ -166,7 +139,6 @@
         <button type="button" class="btn small block ghost" id="btn-clock">Clock</button>
         <button type="button" class="btn small block ghost" id="btn-clear">Clear page</button>
       </section>
-
       <section class="panel-section">
         <h3>Subjects</h3>
         <div class="subject-tabs">
@@ -177,7 +149,6 @@
         </div>
         <div id="subject-panel" class="subject-panel"></div>
       </section>
-
       <section class="panel-section tips">
         <h3>Tips</h3>
         <p class="muted small">Space+drag pan · Wheel zoom · Shift shapes · T timer · C curtain</p>
@@ -189,10 +160,8 @@
       <span id="status-zoom">100%</span>
       <span id="status-page">Page 1 / 1</span>
     </footer>
-
     <input type="file" id="file-image" accept="image/*" hidden />
   </div>
-
   <script src="js/engine.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/app.js"></script>

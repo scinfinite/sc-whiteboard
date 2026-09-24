@@ -1,0 +1,17 @@
+/* SC Whiteboard — teaching widgets */
+.presets{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;max-width:52px}
+.presets button{width:14px;height:14px;border-radius:4px;border:1px solid var(--border);padding:0;cursor:pointer}
+.check-label{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);cursor:pointer}
+.curtain{position:absolute;inset:0;z-index:6;pointer-events:none}
+.curtain::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--cy,45%);background:rgba(15,23,42,.92);pointer-events:auto}
+.curtain-bar{position:absolute;left:0;right:0;top:var(--cy,45%);height:12px;margin-top:-6px;cursor:ns-resize;pointer-events:auto;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.85}
+.magnifier{position:absolute;width:120px;height:120px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 8px 24px rgba(0,0,0,.35);pointer-events:none;z-index:7;background:rgba(255,255,255,.06)}
+.timer-widget,.clock-widget{position:absolute;top:16px;right:16px;z-index:8;padding:12px 14px;border-radius:14px;min-width:140px}
+.timer-display{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums;text-align:center;margin-bottom:8px}
+.timer-actions{display:flex;gap:6px;justify-content:center}
+.clock-widget{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.subject-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.subject-panel{max-height:180px;overflow-y:auto}
+.chem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.chem-el{border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:6px 0;font-size:12px;font-weight:600;cursor:pointer;color:var(--text)}
+.chem-el:hover{border-color:var(--accent);background:var(--accent-soft)}
