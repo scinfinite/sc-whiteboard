@@ -1,95 +1,51 @@
 # SC Whiteboard
 
-Premium interactive web whiteboard inspired by Note 3 teaching software.
+Premium interactive web whiteboard inspired by **Note 3** teaching software.
 
-**Live-ready static app** with glassmorphism UI, multi-page canvas, professional drawing tools, and classroom-friendly features.
+Advanced multi-page canvas with professional drawing tools, classroom teaching utilities, and subject helpers.
 
-## Features
+## Highlights
 
-### Drawing & Annotation
-- Pen, highlighter, eraser, laser pointer
-- Adjustable color, thickness, and opacity
-- Perfect shapes: rectangle, ellipse, line, arrow, triangle
-- Shape recognition-style snap (clean edges)
-- Pressure-like stroke variation on supported devices
+- **Drawing:** pen, soft brush, highlighter, eraser, laser
+- **Shapes:** line, rectangle, ellipse, arrow, triangle · optional fill · Shift constrains
+- **Pages:** add, duplicate, delete, switch with thumbnails
+- **Teaching tools:** spotlight, screen curtain, magnifier, timer / countdown, clock
+- **Subject tools:** Chemistry periodic table, Math quick formulas, ruler guides
+- **Content:** sticky notes, text, image import (file + drag & drop)
+- **Canvas:** zoom, pan, undo/redo, select & move
+- **Polish:** glass UI, light/dark, backgrounds, color presets, keyboard shortcuts, local save, PNG + JSON export
 
-### Pages & Organization
-- Unlimited pages with thumbnail strip
-- Add, duplicate, delete, reorder pages
-- Quick page navigation
+See [docs/FEATURES.md](docs/FEATURES.md) for full Note 3 parity map.
 
-### Interaction
-- Select, move, and resize objects
-- Undo / Redo (keyboard + toolbar)
-- Zoom (mouse wheel / pinch) and pan (space + drag or two-finger)
-- Spotlight / focus mode for presentations
-- Fullscreen teaching mode
-
-### Content
-- Sticky notes
-- Text boxes
-- Image import (drag & drop or file picker)
-- Background themes: plain, grid, ruled, dotted, dark classroom, gradient
-
-### Polish
-- Light / Dark / System theme
-- Glassmorphism toolbar and panels
-- Smooth animations with reduced-motion support
-- Touch, mouse, and stylus friendly
-- Keyboard shortcuts
-- Local storage auto-save
-- Export current page or all pages as PNG
-
-## Quick Start
-
-Open `index.html` in a modern browser, or serve locally:
+## Quick start
 
 ```bash
+# open index.html in a browser, or:
 npx serve .
-# or
-python -m http.server 8080
 ```
 
-## Keyboard Shortcuts
+## Keyboard
 
 | Key | Action |
 |-----|--------|
-| `V` | Select tool |
-| `P` | Pen |
-| `H` | Highlighter |
-| `E` | Eraser |
-| `L` | Line / shapes cycle |
-| `Ctrl+Z` | Undo |
-| `Ctrl+Shift+Z` / `Ctrl+Y` | Redo |
-| `Ctrl+S` | Export PNG |
-| `Space` + drag | Pan |
-| `Delete` | Delete selection |
-| `F` | Toggle fullscreen |
-| `[` / `]` | Decrease / increase stroke |
+| V / P / H / E | Select / Pen / Highlighter / Eraser |
+| Ctrl+Z / Ctrl+Y | Undo / Redo |
+| Ctrl+S | Export PNG |
+| Space + drag | Pan |
+| Delete | Delete selection |
+| F | Fullscreen |
+| [ ] | Stroke size |
+| T | Toggle timer |
+| C | Toggle curtain |
 
-## Project Structure
+## Stack
 
-```
-index.html          # App shell
-css/styles.css      # Design system + glass UI
-js/engine.js        # Canvas engine, strokes, shapes, pages
-js/ui.js            # Toolbar, panels, themes, shortcuts
-js/app.js           # Bootstrap + persistence
-.github/workflows/ci.yml
-```
+Static HTML / CSS / JS (Canvas 2D). No build step required.
 
 ## CI
 
-GitHub Actions runs on every push to `main`:
-- Validates HTML structure
-- Checks required files exist
-- Basic JS syntax check
-
-## Browser Support
-
-Chrome, Edge, Firefox, Safari (latest). Best experience with pointer/stylus support.
+GitHub Actions validates structure, HTML shell, JS syntax, and CSS on every push to `main`.
 
 ---
 
-Built for productivity, study, and teaching.  
-**SC Infinite**
+**SC Infinite** · Productivity & study tools
