@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f css/styles.css
+          test -f js/engine.js
+          test -f js/ui.js
+          test -f js/app.js
+          test -f README.md
+          echo "All required files present"
+
+      - name: Validate HTML has root app shell
+        run: |
+          grep -q 'id="app"' index.html
+          grep -q 'id="board"' index.html
+          grep -q 'SC Whiteboard' index.html
+          echo "HTML structure OK"
+
+      - name: Syntax-check JavaScript
+        run: |
+          node --check js/engine.js
+          node --check js/ui.js
+          node --check js/app.js
+          echo "JS syntax OK"
+
+      - name: Basic CSS sanity
+        run: |
+          grep -q '\.glass' css/styles.css
+          grep -q '\.toolbar' css/styles.css
+          echo "CSS sanity OK"
